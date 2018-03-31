@@ -8,8 +8,7 @@ import (
 
 func gatherproxycom() []string {
 	var ips []string
-	links := gatherproxycomLinks()
-	for _, link := range links {
+	for _, link := range gatherproxycomLinks() {
 		body, err := crawl(link)
 		if err != nil {
 			errmsg("gatherproxycom crawl", err)

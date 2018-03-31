@@ -9,8 +9,7 @@ import (
 
 func freeproxylistcom() []string {
 	var ips []string
-	links := freeproxylistcomLinks()
-	for _, link := range links {
+	for _, link := range freeproxylistcomLinks() {
 		body, err := crawl(link)
 		if err != nil {
 			errmsg("freeproxylistcom crawl", err)

@@ -2,8 +2,7 @@ package sites
 
 func rawlist() []string {
 	var ips []string
-	links := rawlistLinks()
-	for _, link := range links {
+	for _, link := range rawlistLinks() {
 		body, err := crawl(link)
 		if err != nil {
 			errmsg("rawlist crawl", err)

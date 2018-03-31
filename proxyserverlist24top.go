@@ -9,18 +9,13 @@ import (
 
 func proxyserverlist24top() []string {
 	var ips []string
-	list := []string{
-		"http://www.proxyserverlist24.top",
-		"http://www.live-socks.net/",
-	}
-	for _, l := range list {
+	for _, l := range proxyserverlist24topList() {
 		body, err := crawl(l)
 		if err != nil {
 			errmsg("proxyserverlist24top crawl", err)
 			return ips
 		}
-		links := proxyserverlist24topLinks(body)
-		for _, link := range links {
+		for _, link := range proxyserverlist24topLinks(body) {
 			body, err := crawl(link)
 			if err != nil {
 				errmsg("proxyserverlist24top crawl", err)
@@ -34,6 +29,14 @@ func proxyserverlist24top() []string {
 		}
 	}
 	return ips
+}
+
+func proxyserverlist24topList() []string {
+	list := []string{
+		"http://www.proxyserverlist24.top",
+		"http://www.live-socks.net/",
+	}
+	return list
 }
 
 func proxyserverlist24topLinks(body []byte) []string {

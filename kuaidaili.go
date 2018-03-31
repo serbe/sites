@@ -10,8 +10,7 @@ import (
 
 func kuaidaili() []string {
 	var ips []string
-	links := kuaidailiLinks()
-	for _, link := range links {
+	for _, link := range kuaidailiLinks() {
 		body, err := crawl(link)
 		if err != nil {
 			errmsg("kuaidaili crawl", err)

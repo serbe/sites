@@ -9,22 +9,30 @@ import (
 
 func webanetlabs() []string {
 	var ips []string
-	body, err := crawl("http://webanetlabs.net/publ/24")
-	if err != nil {
-		errmsg("webanetlabs crawl", err)
-		return ips
-	}
-	ips = append(ips, webanetlabsIPS(body)...)
-	links := webanetlabsLinks(body)
-	for _, link := range links {
-		body, err := crawl("http://webanetlabs.net" + link)
+	for _, l := range webanetlabsList() {
+		body, err := crawl(l)
 		if err != nil {
 			errmsg("webanetlabs crawl", err)
-			continue
+			return ips
 		}
-		ips = append(ips, ipsFromBytes(body, HTTP)...)
+		ips = append(ips, webanetlabsIPS(body)...)
+		for _, link := range webanetlabsLinks(body) {
+			body, err := crawl(link)
+			if err != nil {
+				errmsg("webanetlabs crawl", err)
+				continue
+			}
+			ips = append(ips, ipsFromBytes(body, HTTP)...)
+		}
 	}
 	return ips
+}
+
+func webanetlabsList() []string {
+	var list = []string{
+		"http://webanetlabs.net/publ/24",
+	}
+	return list
 }
 
 func webanetlabsLinks(body []byte) []string {
@@ -38,7 +46,7 @@ func webanetlabsLinks(body []byte) []string {
 	dom.Find("a").Each(func(_ int, s *goquery.Selection) {
 		href, exists := s.Attr("href")
 		if exists && strings.Contains(href, ".txt") {
-			links = append(links, href)
+			links = append(links, "http://webanetlabs.net"+href)
 		}
 	})
 	return links

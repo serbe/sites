@@ -9,8 +9,7 @@ package sites
 
 // func spysone() []string {
 // 	var ips []string
-// 	links := spysoneLinks()
-// 	for _, link := range links {
+// 	for _, link := range spysoneLinks() {
 // 		body, err := crawl(link)
 // 		if err != nil {
 // 			errmsg("spysone crawl", err)

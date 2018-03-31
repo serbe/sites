@@ -10,8 +10,7 @@ import (
 
 func proxylistorg() []string {
 	var ips []string
-	links := proxylistorgLinks()
-	for _, link := range links {
+	for _, link := range proxylistorgLinks() {
 		body, err := crawl(link)
 		if err != nil {
 			errmsg("proxylistorg crawl", err)

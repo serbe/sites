@@ -7,8 +7,7 @@ import (
 )
 
 func Test_freeproxylistcom(t *testing.T) {
-	links := freeproxylistcomLinks()
-	for _, link := range links {
+	for _, link := range freeproxylistcomLinks() {
 		body, err := crawl(link)
 		assert.NoError(t, err, "freeproxylistcom crawl", link)
 		assert.NotEmpty(t, freeproxylistcomIPS(body), "freeproxylistcomIPS empty", link)
