@@ -6,20 +6,20 @@ import (
 	"strconv"
 )
 
-func gatherproxycom() []string {
+func gatherProxyCom() []string {
 	var ips []string
-	for _, link := range gatherproxycomLinks() {
+	for _, link := range gatherProxyComLinks() {
 		body, err := crawl(link)
 		if err != nil {
-			errmsg("gatherproxycom crawl", err)
+			errmsg("gatherProxyCom crawl", err)
 			continue
 		}
-		ips = append(ips, gatherproxycomIPS(body)...)
+		ips = append(ips, gatherProxyComIPS(body)...)
 	}
 	return ips
 }
 
-func gatherproxycomLinks() []string {
+func gatherProxyComLinks() []string {
 	links := []string{
 		"http://www.gatherproxy.com/embed/",
 		"http://www.gatherproxy.com/embed/?t=Elite&p=&c=",
@@ -28,7 +28,7 @@ func gatherproxycomLinks() []string {
 	return links
 }
 
-func gatherproxycomIPS(body []byte) []string {
+func gatherProxyComIPS(body []byte) []string {
 	var ips []string
 	reAddr := `"PROXY_IP":"(.+?)".+?"PROXY_PORT":"(.+?)"`
 	re := regexp.MustCompile(reAddr)

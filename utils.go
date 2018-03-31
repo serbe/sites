@@ -10,6 +10,7 @@ import (
 	"time"
 )
 
+// constant schemes
 const (
 	HTTP   = "http"
 	HTTPS  = "https"

@@ -6,17 +6,17 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func Test_webanetlabs(t *testing.T) {
-	for _, l := range webanetlabsList() {
+func Test_webanetLabs(t *testing.T) {
+	for _, l := range webanetLabsList() {
 		body, err := crawl(l)
-		assert.NoError(t, err, "webanetlabs crawl", l)
-		assert.NotEmpty(t, webanetlabsIPS(body), "webanetlabsIPS empty", l)
-		links := webanetlabsLinks(body)
-		assert.NotEmpty(t, links, "webanetlabsLinks empty", links)
+		assert.NoError(t, err, "webanetLabs crawl", l)
+		assert.NotEmpty(t, webanetLabsIPS(body), "webanetLabsIPS empty", l)
+		links := webanetLabsLinks(body)
+		assert.NotEmpty(t, links, "webanetLabsLinks empty", links)
 		for _, link := range links {
 			body, err := crawl(link)
-			assert.NoError(t, err, "webanetlabs crawl", link)
-			assert.NotEmpty(t, webanetlabsIPS(body), "webanetlabsIPS empty", link)
+			assert.NoError(t, err, "webanetLabs crawl", link)
+			assert.NotEmpty(t, webanetLabsIPS(body), "webanetLabsIPS empty", link)
 		}
 	}
 }

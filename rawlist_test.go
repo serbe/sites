@@ -6,10 +6,10 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func Test_rawlist(t *testing.T) {
-	for _, link := range rawlistLinks() {
+func Test_rawList(t *testing.T) {
+	for _, link := range rawListLinks() {
 		body, err := crawl(link)
-		assert.NoError(t, err, "rawlist crawl", link)
-		assert.NotEmpty(t, ipsFromBytes(body, HTTP), "rawlistIPS empty", link)
+		assert.NoError(t, err, "rawList crawl", link)
+		assert.NotEmpty(t, ipsFromBytes(body, HTTP), "rawListIPS empty", link)
 	}
 }

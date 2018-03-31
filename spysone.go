@@ -7,27 +7,27 @@ package sites
 // 	"github.com/PuerkitoBio/goquery"
 // )
 
-// func spysone() []string {
+// func spySone() []string {
 // 	var ips []string
-// 	for _, link := range spysoneLinks() {
+// 	for _, link := range spySoneLinks() {
 // 		body, err := crawl(link)
 // 		if err != nil {
-// 			errmsg("spysone crawl", err)
+// 			errmsg("spySone crawl", err)
 // 			continue
 // 		}
-// 		ips = append(ips, spysoneIPS(body)...)
+// 		ips = append(ips, spySoneIPS(body)...)
 // 	}
 // 	return ips
 // }
 
-// func spysoneLinks() []string {
+// func spySoneLinks() []string {
 // 	var links = []string{
 // 		"http://spys.one/free-proxy-list/CN/",
 // 	}
 // 	return links
 // }
 
-// func spysoneIPS(body []byte) []string {
+// func spySoneIPS(body []byte) []string {
 // 	var ips []string
 // 	r := bytes.NewReader(body)
 // 	dom, err := goquery.NewDocumentFromReader(r)

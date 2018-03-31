@@ -1,5 +1,8 @@
 package sites
 
+// ParseSites - parse sites to find proxy.
+// logDebug to show debug information
+// logError to show error messages
 func ParseSites(logDebug, logError bool) []string {
 	type parser struct {
 		name string
@@ -11,15 +14,15 @@ func ParseSites(logDebug, logError bool) []string {
 	debugmsg("start parse sites")
 	ch := make(chan parser)
 	go func() {
-		data := parser{name: "freeproxylist", ips: freeproxylist()}
+		data := parser{name: "freeProxyList", ips: freeProxyList()}
 		ch <- data
 	}()
 	go func() {
-		data := parser{name: "freeproxylistcom", ips: freeproxylistcom()}
+		data := parser{name: "freeProxyListCom", ips: freeProxyListCom()}
 		ch <- data
 	}()
 	go func() {
-		data := parser{name: "gatherproxycom", ips: gatherproxycom()}
+		data := parser{name: "gatherProxyCom", ips: gatherProxyCom()}
 		ch <- data
 	}()
 	go func() {
@@ -27,22 +30,30 @@ func ParseSites(logDebug, logError bool) []string {
 		ch <- data
 	}()
 	go func() {
-		data := parser{name: "proxylistorg", ips: proxylistorg()}
+		data := parser{name: "proxyListOrg", ips: proxyListOrg()}
 		ch <- data
 	}()
 	go func() {
-		data := parser{name: "proxyserverlist24top", ips: proxyserverlist24top()}
+		data := parser{name: "proxyServerList24Top", ips: proxyServerList24Top()}
 		ch <- data
 	}()
 	go func() {
-		data := parser{name: "rawlist", ips: rawlist()}
+		data := parser{name: "rawList", ips: rawList()}
 		ch <- data
 	}()
 	go func() {
-		data := parser{name: "webanetlabs", ips: webanetlabs()}
+		data := parser{name: "webanetLabs", ips: webanetLabs()}
 		ch <- data
 	}()
-	for i := 0; i < 8; i++ {
+	go func() {
+		data := parser{name: "cnProxyCom", ips: cnProxyCom()}
+		ch <- data
+	}()
+	go func() {
+		data := parser{name: "xicidailiCom", ips: xicidailiCom()}
+		ch <- data
+	}()
+	for i := 0; i < 10; i++ {
 		data := <-ch
 		ips = append(ips, data.ips...)
 	}

@@ -6,10 +6,10 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func Test_freeproxylist(t *testing.T) {
-	for _, link := range freeproxylistLinks() {
+func Test_freeProxyList(t *testing.T) {
+	for _, link := range freeProxyListLinks() {
 		body, err := crawl(link)
-		assert.NoError(t, err, "freeproxylist crawl", link)
-		assert.NotEmpty(t, freeproxylistIPS(body), "freeproxylistIPS empty", link)
+		assert.NoError(t, err, "freeProxyList crawl", link)
+		assert.NotEmpty(t, freeProxyListIPS(body), "freeProxyListIPS empty", link)
 	}
 }

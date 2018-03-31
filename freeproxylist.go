@@ -7,20 +7,20 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
-func freeproxylist() []string {
+func freeProxyList() []string {
 	var ips []string
-	for _, link := range freeproxylistLinks() {
+	for _, link := range freeProxyListLinks() {
 		body, err := crawl(link)
 		if err != nil {
-			errmsg("freeproxylist crawl", err)
+			errmsg("freeProxyList crawl", err)
 			continue
 		}
-		ips = append(ips, freeproxylistIPS(body)...)
+		ips = append(ips, freeProxyListIPS(body)...)
 	}
 	return ips
 }
 
-func freeproxylistLinks() []string {
+func freeProxyListLinks() []string {
 	var links = []string{
 		"https://www.us-proxy.org/",
 		"http://free-proxy-list.net/",
@@ -30,12 +30,12 @@ func freeproxylistLinks() []string {
 	return links
 }
 
-func freeproxylistIPS(body []byte) []string {
+func freeProxyListIPS(body []byte) []string {
 	var ips []string
 	r := bytes.NewReader(body)
 	dom, err := goquery.NewDocumentFromReader(r)
 	if err != nil {
-		errmsg("freeproxylistIPS NewDocumentFromReader", err)
+		errmsg("freeProxyListIPS NewDocumentFromReader", err)
 		return ips
 	}
 	dom.Find("tr").Each(func(_ int, s *goquery.Selection) {

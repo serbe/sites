@@ -7,18 +7,18 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
-func proxyserverlist24top() []string {
+func proxyServerList24Top() []string {
 	var ips []string
-	for _, l := range proxyserverlist24topList() {
+	for _, l := range proxyServerList24TopList() {
 		body, err := crawl(l)
 		if err != nil {
-			errmsg("proxyserverlist24top crawl", err)
+			errmsg("proxyServerList24Top crawl", err)
 			return ips
 		}
-		for _, link := range proxyserverlist24topLinks(body) {
+		for _, link := range proxyServerList24TopLinks(body) {
 			body, err := crawl(link)
 			if err != nil {
-				errmsg("proxyserverlist24top crawl", err)
+				errmsg("proxyServerList24Top crawl", err)
 				continue
 			}
 			scheme := HTTP
@@ -31,7 +31,7 @@ func proxyserverlist24top() []string {
 	return ips
 }
 
-func proxyserverlist24topList() []string {
+func proxyServerList24TopList() []string {
 	list := []string{
 		"http://www.proxyserverlist24.top",
 		"http://www.live-socks.net/",
@@ -39,12 +39,12 @@ func proxyserverlist24topList() []string {
 	return list
 }
 
-func proxyserverlist24topLinks(body []byte) []string {
+func proxyServerList24TopLinks(body []byte) []string {
 	var links []string
 	r := bytes.NewReader(body)
 	dom, err := goquery.NewDocumentFromReader(r)
 	if err != nil {
-		errmsg("proxyserverlist24topLinks NewDocumentFromReader", err)
+		errmsg("proxyServerList24TopLinks NewDocumentFromReader", err)
 		return links
 	}
 	dom.Find("div.jump-link").Each(func(_ int, s *goquery.Selection) {
