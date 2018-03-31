@@ -49,7 +49,7 @@ func proxyServerList24TopLinks(body []byte) []string {
 	}
 	dom.Find("div.jump-link").Each(func(_ int, s *goquery.Selection) {
 		href, exist := s.Find("a").Attr("href")
-		if exist {
+		if exist && !strings.Contains(href, "smtp") {
 			links = append(links, href)
 		}
 	})

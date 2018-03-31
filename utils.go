@@ -6,8 +6,6 @@ import (
 	"log"
 	"net/http"
 	"regexp"
-	"strings"
-	"time"
 )
 
 // constant schemes
@@ -23,9 +21,9 @@ var (
 )
 
 func crawl(target string) ([]byte, error) {
-	timeout := time.Duration(15000 * time.Millisecond)
+	// timeout := time.Duration(15000 * time.Millisecond)
 	client := &http.Client{
-		Timeout: timeout,
+		// Timeout: timeout,
 	}
 	req, err := http.NewRequest("GET", target, nil)
 	if err != nil {
@@ -68,8 +66,6 @@ func ipsFromBytes(body []byte, scheme string) []string {
 }
 
 func decodeBase64(src string) string {
-	src = strings.Replace(src, "Proxy('", "", -1)
-	src = strings.Replace(src, "')", "", -1)
 	out, _ := base64.StdEncoding.DecodeString(src)
 	return string(out)
 }
@@ -90,4 +86,17 @@ func debugmsg(str ...interface{}) {
 	if useDebug {
 		log.Println(str)
 	}
+}
+
+func rot13(b rune) rune {
+	var a, z rune
+	switch {
+	case 'a' <= b && b <= 'z':
+		a, z = 'a', 'z'
+	case 'A' <= b && b <= 'Z':
+		a, z = 'A', 'Z'
+	default:
+		return b
+	}
+	return (b-a+13)%(z-a+1) + a
 }

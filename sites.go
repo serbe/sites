@@ -53,6 +53,10 @@ func ParseSites(logDebug, logError bool) []string {
 		data := parser{name: "xicidailiCom", ips: xicidailiCom()}
 		ch <- data
 	}()
+	// go func() {
+	// 	data := parser{name: "coolProxyNetCom", ips: coolProxyNetCom()}
+	// 	ch <- data
+	// }()
 	for i := 0; i < 10; i++ {
 		data := <-ch
 		ips = append(ips, data.ips...)

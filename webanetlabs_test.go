@@ -1,6 +1,7 @@
 package sites
 
 import (
+	"strings"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -11,12 +12,15 @@ func Test_webanetLabs(t *testing.T) {
 		body, err := crawl(l)
 		assert.NoError(t, err, "webanetLabs crawl", l)
 		assert.NotEmpty(t, webanetLabsIPS(body), "webanetLabsIPS empty", l)
-		links := webanetLabsLinks(body)
-		assert.NotEmpty(t, links, "webanetLabsLinks empty", links)
-		for _, link := range links {
+		assert.NotEmpty(t, webanetLabsLinks(body), "webanetLabsLinks empty")
+		for _, link := range webanetLabsLinks(body) {
 			body, err := crawl(link)
 			assert.NoError(t, err, "webanetLabs crawl", link)
-			assert.NotEmpty(t, webanetLabsIPS(body), "webanetLabsIPS empty", link)
+			scheme := HTTP
+			if strings.Contains(link, "socks") {
+				scheme = SOCKS5
+			}
+			assert.NotEmpty(t, ipsFromBytes(body, scheme), "ipsFromBytes empty", link)
 		}
 	}
 }

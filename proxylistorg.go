@@ -31,7 +31,10 @@ func proxyListOrgIPS(body []byte) []string {
 	}
 	dom.Find("ul").Each(func(_ int, s *goquery.Selection) {
 		scheme := strings.ToLower(s.Find("li.https").Text())
-		ip := decodeBase64(s.Find("li.proxy").Text())
+		ip := s.Find("li.proxy").Text()
+		ip = strings.Replace(ip, "Proxy('", "", -1)
+		ip = strings.Replace(ip, "')", "", -1)
+		ip = decodeBase64(ip)
 		if ip != "" && (scheme == HTTP || scheme == HTTPS || scheme == SOCKS5) {
 			ips = append(ips, scheme+"://"+ip)
 		}
