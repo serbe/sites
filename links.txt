@@ -19,6 +19,8 @@ http://www.proxyserverlist24.top
 http://www.live-socks.net
 http://cn-proxy.com
 http://www.xicidaili.com/nn
+http://www.mrhinkydink.com/proxies.htm
+-http://www.cool-proxy.net
 
 
 http://proxy50-50.blogspot.com.tr/
@@ -72,7 +74,6 @@ http://nntime.com/proxy-list-03.htm
 http://www.free-proxy-list.ru/free-proxy-list/all-working-proxies.php
 http://elite-proxies.blogspot.com/
 http://proxy-masterz.com/vb/f3/|#post|0
-https://incloak.com/proxy-list/
 http://topproxys.blogspot.com/
 
 http://www.fakemyip.info/proxylist
@@ -96,7 +97,6 @@ http://proxy.ipcn.org/proxylist2.html
 http://www.forum.freeproxy.ru/viewforum.php?f=5|viewtopic.php?t=|0
 http://www.hayatforumda.com/anonymous-proxy/|#post|0
 http://www.cybersyndrome.net
-http://www.proxyfire.net/forum/forumdisplay.php?f=14
 http://globalproxies.blogspot.com/
 http://community.aliveproxy.com/forums/8.aspx
 http://www.cnproxy.com
@@ -129,10 +129,6 @@ http://www.proxz.com/proxy_list_anonymous_us_0.html
 http://www.proxz.com/proxy_list_high_anonymous_0.html
 http://www.proxz.com/proxy_list_jp_0.html
 http://www.proxz.com/proxy_list_anonymous_us_0.html
-http://www.cool-proxy.net/proxies/http_proxy_list/sort:score/direction:desc
-http://www.cool-proxy.net/proxies/http_proxy_list/sort:score/direction:desc/page:2
-http://www.cool-proxy.net/proxies/http_proxy_list/page:3/sort:score/direction:desc
-http://www.cool-proxy.net/proxies/http_proxy_list/page:4/sort:score/direction:desc
 http://dogdev.net/Proxy/MY
 http://spys.ru/en/http-proxy-list/
 http://spys.ru/en/https-ssl-proxy/
@@ -147,41 +143,26 @@ http://spys.ru/free-proxy-list/FR/
 http://spys.ru/free-proxy-list/NL/
 http://proxy.centerblog.net/
 http://free-proxy.blogspot.com.tr/
-http://www.proxyfire.net/forum/forumdisplay.php?f=14|showthread.php?t=|0
 http://www.cybersyndrome.net/pla6.html
 http://elite-proxies.blogspot.com/
 http://proxy.ipcn.org/proxylist2.html
 http://www.free-proxy-list.ru/free-proxy-list/all-working-proxies.php
 http://proxy.ipcn.org/proxylist2.html
 http://proxy-masterz.com/vb/f3/|#post|0
-http://www.proxydb.ru/News.aspx|HTTP|0
+http://www.proxydb.ru/News.aspx|HTTP|0`
 http://www.hayatforumda.com/anonymous-proxy/|#post|0
 http://www.dlnxt.com/f42-proxies/|#post|0
 http://www.lawinaboard.com/forums/index.php?showforum=8|showtopic=|1|act=Attach
 http://www.cybersyndrome.net/plr.html
 http://www.cybersyndrome.net/pla.html
 http://www.cybersyndrome.net/pld.html
-http://www.proxyfire.net/forum/showthread.php?t=73139
-http://www.idcloak.com/proxylist/free-proxy-ip-list.html
-http://www.proxyfire.net/forum/showthread.php?t=73141
-http://www.proxyfire.net/forum/showthread.php?t=73140
+http://www.proxyfire.net/forum/showthread.php?t=73139http://www.idcloak.com/proxylist/free-proxy-ip-list.html
 http://freenetcracker.blogspot.com.tr/2015/02/top-proxy-list.html
-http://www.mrhinkydink.com/proxies.htm
-http://www.mrhinkydink.com/proxies2.htm
-http://www.mrhinkydink.com/proxies3.htm
-http://www.mrhinkydink.com/proxies4.htm
-http://aimeegracecatering.blogspot.com/2015/08/5000-proxy-list-server-aktif-agustus.html
+
+
+https://www.indoblog.me/2017/02/inilah-dia-daftar-proxy-gratis-dan.html
 http://tools.rosinstrument.com/proxy/?rule1
-https://incloak.com/proxy-list/
-https://incloak.com/proxy-list/?type=h
-https://incloak.com/proxy-list/?type=hs
-https://incloak.com/proxy-list/?type=h&anon=4
-https://incloak.com/proxy-list/?type=h&anon=3
-https://incloak.com/proxy-list/?type=h&anon=2
-https://incloak.com/proxy-list/?type=h&anon=1
-http://www.cool-proxy.net/proxies/http_proxy_list/sort:score/direction:desc
-http://www.cool-proxy.net/proxies/http_proxy_list/country_code:CN/port:/anonymous:
-http://www.cool-proxy.net/proxies/http_proxy_list/country_code:US/port:/anonymous:
+
 
 
 
