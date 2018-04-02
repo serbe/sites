@@ -11,6 +11,5 @@ func Test_cyberSyndromeNet(t *testing.T) {
 		body, err := crawl(link)
 		assert.NoError(t, err, "cyberSyndromeNet crawl", link)
 		assert.NotEmpty(t, cyberSyndromeNetIPS(body), "cyberSyndromeNetIPS empty", link)
-		printIPS(cyberSyndromeNetIPS(body))
 	}
 }
