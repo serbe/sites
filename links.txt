@@ -17,6 +17,7 @@ cn-proxy.com
 www.xicidaili.com
 www.mrhinkydink.com
 www.cybersyndrome.net
+
 -http://www.cool-proxy.net
 
 
@@ -57,19 +58,17 @@ http://proxy50-50.blogspot.com.tr/
 
 
 
-http://free-proxy-list.net/uk-proxy.html
+
 
 http://proxy.ipcn.org/proxylist2.html
-http://free-proxy-list.net/anonymous-proxy.html
+
 http://topproxys.blogspot.com/
-http://www.cybersyndrome.net
 http://nntime.com/proxy-updated-01.htm
 http://nntime.com/proxy-list-01.htm
-http://www.cybersyndrome.net|pl|0
 http://nntime.com/proxy-list-02.htm
 http://nntime.com/proxy-list-03.htm
 http://www.free-proxy-list.ru/free-proxy-list/all-working-proxies.php
-http://elite-proxies.blogspot.com/
+
 http://proxy-masterz.com/vb/f3/|#post|0
 http://topproxys.blogspot.com/
 
@@ -93,7 +92,6 @@ http://mmm-downloads.at.ua/blog
 http://proxy.ipcn.org/proxylist2.html
 http://www.forum.freeproxy.ru/viewforum.php?f=5|viewtopic.php?t=|0
 http://www.hayatforumda.com/anonymous-proxy/|#post|0
-http://www.cybersyndrome.net
 http://globalproxies.blogspot.com/
 http://community.aliveproxy.com/forums/8.aspx
 http://www.cnproxy.com
@@ -140,8 +138,7 @@ http://spys.ru/free-proxy-list/FR/
 http://spys.ru/free-proxy-list/NL/
 http://proxy.centerblog.net/
 http://free-proxy.blogspot.com.tr/
-http://www.cybersyndrome.net/pla6.html
-http://elite-proxies.blogspot.com/
+
 http://proxy.ipcn.org/proxylist2.html
 http://www.free-proxy-list.ru/free-proxy-list/all-working-proxies.php
 http://proxy.ipcn.org/proxylist2.html
@@ -150,9 +147,6 @@ http://www.proxydb.ru/News.aspx|HTTP|0`
 http://www.hayatforumda.com/anonymous-proxy/|#post|0
 http://www.dlnxt.com/f42-proxies/|#post|0
 http://www.lawinaboard.com/forums/index.php?showforum=8|showtopic=|1|act=Attach
-http://www.cybersyndrome.net/plr.html
-http://www.cybersyndrome.net/pla.html
-http://www.cybersyndrome.net/pld.html
 http://www.proxyfire.net/forum/showthread.php?t=73139http://www.idcloak.com/proxylist/free-proxy-ip-list.html
 http://freenetcracker.blogspot.com.tr/2015/02/top-proxy-list.html
 

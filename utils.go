@@ -39,7 +39,7 @@ func crawl(target string) ([]byte, error) {
 	}
 	body, err := ioutil.ReadAll(resp.Body)
 	resp.Body.Close()
-	ioutil.WriteFile("tmp.html", body, 0644)
+	// ioutil.WriteFile("tmp.html", body, 0644)
 	return body, err
 }
 
