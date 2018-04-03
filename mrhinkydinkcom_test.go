@@ -11,5 +11,6 @@ func Test_mrHinkyDinkCom(t *testing.T) {
 		body, err := crawl(link)
 		assert.NoError(t, err, "mrHinkyDinkCom crawl", link)
 		assert.NotEmpty(t, mrHinkyDinkComIPS(body), "mrHinkyDinkComLinks empty", link)
+		checkURI(mrHinkyDinkComIPS(body), t)
 	}
 }

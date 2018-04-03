@@ -11,5 +11,6 @@ func Test_freeProxyListCom(t *testing.T) {
 		body, err := crawl(link)
 		assert.NoError(t, err, "freeProxyListCom crawl", link)
 		assert.NotEmpty(t, freeProxyListComIPS(body), "freeProxyListComIPS empty", link)
+		checkURI(freeProxyListComIPS(body), t)
 	}
 }

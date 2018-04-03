@@ -11,5 +11,6 @@ func Test_kuaidaili(t *testing.T) {
 		body, err := crawl(link)
 		assert.NoError(t, err, "kuaidaili crawl", link)
 		assert.NotEmpty(t, kuaidailiIPS(body), "kuaidailiIPS empty", link)
+		checkURI(kuaidailiIPS(body), t)
 	}
 }

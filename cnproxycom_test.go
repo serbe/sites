@@ -11,5 +11,6 @@ func Test_cnProxyCom(t *testing.T) {
 		body, err := crawl(link)
 		assert.NoError(t, err, "cnProxyCom crawl", link)
 		assert.NotEmpty(t, cnProxyComIPS(body), "cnProxyComIPS empty", link)
+		checkURI(cnProxyComIPS(body), t)
 	}
 }

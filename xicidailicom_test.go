@@ -11,5 +11,6 @@ func Test_xicidailiCom(t *testing.T) {
 		body, err := crawl(link)
 		assert.NoError(t, err, "xicidailiCom crawl", link)
 		assert.NotEmpty(t, xicidailiComIPS(body), "xicidailiComIPS empty", link)
+		checkURI(xicidailiComIPS(body), t)
 	}
 }

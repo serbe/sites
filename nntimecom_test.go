@@ -11,5 +11,6 @@ func Test_nnTimeCom(t *testing.T) {
 		body, err := crawl(link)
 		assert.NoError(t, err, "nnTimeCom crawl", link)
 		assert.NotEmpty(t, nnTimeComIPS(body), "nnTimeComIPS empty", link)
+		checkURI(nnTimeComIPS(body), t)
 	}
 }

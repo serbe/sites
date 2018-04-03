@@ -11,5 +11,6 @@ func Test_coolProxyNetCom(t *testing.T) {
 		body, err := crawl(link)
 		assert.NoError(t, err, "coolProxyNetCom crawl", link)
 		assert.NotEmpty(t, coolProxyNetComIPS(body), "coolProxyNetComIPS empty", link)
+		checkURI(coolProxyNetComIPS(body), t)
 	}
 }

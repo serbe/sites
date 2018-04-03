@@ -21,6 +21,7 @@ func Test_webanetLabs(t *testing.T) {
 				scheme = SOCKS5
 			}
 			assert.NotEmpty(t, ipsFromBytes(body, scheme), "ipsFromBytes empty", link)
+			checkURI(ipsFromBytes(body, scheme), t)
 		}
 	}
 }
