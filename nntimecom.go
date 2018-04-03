@@ -51,7 +51,7 @@ func nnTimeComIPS(body []byte) []string {
 		}
 	}
 	dom.Find("table#proxylist.data tbody tr").Each(func(_ int, s *goquery.Selection) {
-		ip := "http://" + s.Find("td").Eq(1).Text()
+		ip := s.Find("td").Eq(1).Text()
 		ip = strings.Replace(ip, `document.write(":"`, ":", -1)
 		ip = strings.Replace(ip, ")", "", -1)
 		ip = strings.Replace(ip, "+", "", -1)
@@ -59,6 +59,7 @@ func nnTimeComIPS(body []byte) []string {
 			ip = strings.Replace(ip, k, v, -1)
 		}
 		ip = strings.Replace(ip, "+", "", -1)
+		ip = "http://" + ip
 		if len(ip) > 8 {
 			ips = append(ips, ip)
 		}
