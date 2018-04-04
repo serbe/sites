@@ -9,11 +9,22 @@ package sites
 
 // func proxy5050() []string {
 // 	var ips []string
-// 	_, err := crawl("http://proxy50-50.blogspot.com.tr/")
-// 	if err != nil {
-// 		errmsg("proxy5050 crawl", err)
+// 	for _, link := range proxy5050Links() {
+// 		body, err := crawl(link)
+// 		if err != nil {
+// 			errmsg("proxy5050 crawl", err)
+// 			continue
+// 		}
+// 		ips = append(ips, proxy5050IPS(body)...)
 // 	}
 // 	return ips
+// }
+
+// func proxy5050Links() []string {
+// 	links := []string{
+// 		"http://proxy50-50.blogspot.com.tr/",
+// 	}
+// 	return links
 // }
 
 // func proxy5050IPS(body []byte) []string {
