@@ -8,20 +8,20 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
-func coolProxyNetCom() []string {
+func coolProxyNet() []string {
 	var ips []string
-	for _, link := range coolProxyNetComLinks() {
+	for _, link := range coolProxyNetLinks() {
 		body, err := crawl(link)
 		if err != nil {
-			errmsg("coolProxyNetCom crawl", err)
+			errmsg("coolProxyNet crawl", err)
 			continue
 		}
-		ips = append(ips, coolProxyNetComIPS(body)...)
+		ips = append(ips, coolProxyNetIPS(body)...)
 	}
 	return ips
 }
 
-func coolProxyNetComLinks() []string {
+func coolProxyNetLinks() []string {
 	var links []string
 	for page := 1; page < 4; page++ {
 		links = append(links, fmt.Sprintf("https://www.cool-proxy.net/proxies/http_proxy_list/sort:score/direction:desc/page:%d", page))
@@ -29,12 +29,12 @@ func coolProxyNetComLinks() []string {
 	return links
 }
 
-func coolProxyNetComIPS(body []byte) []string {
+func coolProxyNetIPS(body []byte) []string {
 	var ips []string
 	r := bytes.NewReader(body)
 	dom, err := goquery.NewDocumentFromReader(r)
 	if err != nil {
-		errmsg("coolProxyNetComIPS NewDocumentFromReader", err)
+		errmsg("coolProxyNetIPS NewDocumentFromReader", err)
 		return ips
 	}
 	dom.Find("tbody tr").Each(func(_ int, s *goquery.Selection) {

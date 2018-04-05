@@ -18,8 +18,8 @@ www.xicidaili.com
 www.mrhinkydink.com
 www.cybersyndrome.net
 nntime.com
-
--http://www.cool-proxy.net
+www.fakemyip.info
+www.cool-proxy.net
 
 
 http://proxy50-50.blogspot.com.tr/
@@ -58,34 +58,18 @@ http://topproxys.blogspot.com/
 
 
 http://proxy-masterz.com/vb/f3/|#post|0
-http://topproxys.blogspot.com/
 
-http://www.fakemyip.info/proxylist
-http://www.fakemyip.info/elite-proxies
 http://www.proxydb.ru/News.aspx|HTTP|0
-http://www.fakemyip.info/anonymous-proxies
 
 http://www.final4ever.com/forumdisplay.php?f=144|showthread.php?t=|0
 
 http://bulkinfo.net/Proxy|/Proxy/Article/|0
-http://www.cnproxy.com|proxy|0
-http://www.proxyvadi.net/proxy-list|-listesi-|0
-http://en.soks.biz/?free
 http://proxy.speedtest.at/proxyOnlyAnonymous.php?offset=0|offset|0
 http://www.hackingballz.com/lista_proxys_anonimos|lista_proxys_anonimos/|0
-http://www.dlnxt.com/f42-proxies/|#post|0
-http://www.3ghttp.com/daili/zxhttp/|daili/zxhttp/|0
-http://www.fakemyip.info/transparent-proxies
 http://mmm-downloads.at.ua/blog
 http://www.forum.freeproxy.ru/viewforum.php?f=5|viewtopic.php?t=|0
-http://www.hayatforumda.com/anonymous-proxy/|#post|0
 http://globalproxies.blogspot.com/
-http://community.aliveproxy.com/forums/8.aspx
 http://www.cnproxy.com
-http://www.forum.freeproxy.ru/viewforum.php?f=5
-http://www.final4ever.com/forumdisplay.php?f=144
-http://www.dlnxt.com/f42-proxies/
-http://www.hayatforumda.com/anonymous-proxy/
 
 http://www.atomintersoft.com/high_anonymity_elite_proxy_list
 http://proxy.ucoz.com/
@@ -119,16 +103,12 @@ http://spys.ru/free-proxy-list/NL/
 http://proxy.centerblog.net/
 http://free-proxy.blogspot.com.tr/
 
-http://proxy-masterz.com/vb/f3/|#post|0
 http://www.proxydb.ru/News.aspx|HTTP|0`
-http://www.hayatforumda.com/anonymous-proxy/|#post|0
-http://www.dlnxt.com/f42-proxies/|#post|0
 
 
 
 
 js http://www.idcloak.com/proxylist/free-proxy-ip-list.html
-js https://hidemy.name/ru/proxy-list/
 
 
 http://freenetcracker.blogspot.com.tr/2015/02/top-proxy-list.html
