@@ -14,6 +14,22 @@ func ParseSites(logDebug, logError bool) []string {
 	debugmsg("start parse sites")
 	ch := make(chan parser)
 	go func() {
+		data := parser{name: "cnProxyCom", ips: cnProxyCom()}
+		ch <- data
+	}()
+	go func() {
+		data := parser{name: "coolProxyNetCom", ips: coolProxyNetCom()}
+		ch <- data
+	}()
+	go func() {
+		data := parser{name: "cyberSyndromeNet", ips: cyberSyndromeNet()}
+		ch <- data
+	}()
+	go func() {
+		data := parser{name: "fakeMyIPInfo", ips: fakeMyIPInfo()}
+		ch <- data
+	}()
+	go func() {
 		data := parser{name: "freeProxyList", ips: freeProxyList()}
 		ch <- data
 	}()
@@ -27,6 +43,14 @@ func ParseSites(logDebug, logError bool) []string {
 	}()
 	go func() {
 		data := parser{name: "kuaidaili", ips: kuaidaili()}
+		ch <- data
+	}()
+	go func() {
+		data := parser{name: "mrHinkyDinkCom", ips: mrHinkyDinkCom()}
+		ch <- data
+	}()
+	go func() {
+		data := parser{name: "nnTimeCom", ips: nnTimeCom()}
 		ch <- data
 	}()
 	go func() {
@@ -46,31 +70,13 @@ func ParseSites(logDebug, logError bool) []string {
 		ch <- data
 	}()
 	go func() {
-		data := parser{name: "cnProxyCom", ips: cnProxyCom()}
-		ch <- data
-	}()
-	go func() {
 		data := parser{name: "xicidailiCom", ips: xicidailiCom()}
 		ch <- data
 	}()
-	go func() {
-		data := parser{name: "mrHinkyDinkCom", ips: mrHinkyDinkCom()}
-		ch <- data
-	}()
-	go func() {
-		data := parser{name: "cyberSyndromeNet", ips: cyberSyndromeNet()}
-		ch <- data
-	}()
-	go func() {
-		data := parser{name: "nnTimeCom", ips: nnTimeCom()}
-		ch <- data
-	}()
-	// go func() {
-	// 	data := parser{name: "coolProxyNetCom", ips: coolProxyNetCom()}
-	// 	ch <- data
-	// }()
-	for i := 0; i < 13; i++ {
+
+	for i := 0; i < 15; i++ {
 		data := <-ch
+		debugmsg("get", len(data.ips), "from", data.name)
 		ips = append(ips, data.ips...)
 	}
 	debugmsg("end parse sites, found", len(ips), "proxy")
