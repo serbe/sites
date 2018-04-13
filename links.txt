@@ -20,58 +20,32 @@ www.cybersyndrome.net
 nntime.com
 www.fakemyip.info
 www.cool-proxy.net
+proxy.centerblog.net
+dogdev.net/Proxy/all
+www.ipaddress.com
+www.atomintersoft.com
+globalproxies.blogspot.com
+
 
 
 http://proxy50-50.blogspot.com.tr/
-
-
-
-
 
 'https://hidester.com/proxydata/php/data.php?mykey=data&offset=0&limit=1000&orderBy=latest_check&sortOrder=DESC&country=&port=&type=undefined&anonymity=undefined&ping=undefined&gproxy=2',
 'http://awmproxy.com/freeproxy.php',
 'http://www.proxynova.com/proxy-server-list/',
 
-
-
-
-
-
 "https://hidester.com/proxydata/php/data.php?mykey=data&offset=0&limit=1000&orderBy=latest_check&sortOrder=DESC&country=&port=&type=undefined&anonymity=undefined&ping=undefined&gproxy=2"
 "http://awmproxy.com/freeproxy.php"
-
 
 "https://premproxy.com/list/"
 
 "http://www.proxynova.com/proxy-server-list/"
 "http://www.httptunnel.ge/ProxyListForFree.aspx"
 
-
-
-
-
-
-
-
-
-http://topproxys.blogspot.com/
-
-
-http://proxy-masterz.com/vb/f3/|#post|0
-
-http://www.proxydb.ru/News.aspx|HTTP|0
-
-http://www.final4ever.com/forumdisplay.php?f=144|showthread.php?t=|0
-
-http://bulkinfo.net/Proxy|/Proxy/Article/|0
-http://proxy.speedtest.at/proxyOnlyAnonymous.php?offset=0|offset|0
 http://www.hackingballz.com/lista_proxys_anonimos|lista_proxys_anonimos/|0
-http://mmm-downloads.at.ua/blog
-http://www.forum.freeproxy.ru/viewforum.php?f=5|viewtopic.php?t=|0
-http://globalproxies.blogspot.com/
-http://www.cnproxy.com
 
-http://www.atomintersoft.com/high_anonymity_elite_proxy_list
+http://www.forum.freeproxy.ru/viewforum.php?f=5|viewtopic.php?t=|0
+http://www.cnproxy.com
 http://proxy.ucoz.com/
 http://proxy.ucoz.com/news/1-0-1
 http://proxy.ucoz.com/news/1-0-2
@@ -81,14 +55,11 @@ http://www.xroxy.com/proxylist.htm
 http://www.xroxy.com/proxylist.php?port=&type=&ssl=&country=&latency=&reliability=&sort=reliability&desc=true&pnum=1#table
 http://www.xroxy.com/proxylist.php?port=&type=&ssl=&country=&latency=&reliability=&sort=reliability&desc=true&pnum=2#table
 http://www.xroxy.com/proxylist.php?port=&type=All_http&ssl=&country=&latency=&reliability=#table
-
 http://www.httptunnel.ge/ProxyListForFree.aspx
-http://ipaddress.com/proxy-list/
 http://www.proxz.com/proxy_list_anonymous_us_0.html
 http://www.proxz.com/proxy_list_high_anonymous_0.html
 http://www.proxz.com/proxy_list_jp_0.html
 http://www.proxz.com/proxy_list_anonymous_us_0.html
-http://dogdev.net/Proxy/MY
 http://spys.ru/en/http-proxy-list/
 http://spys.ru/en/https-ssl-proxy/
 http://spys.ru/en/anonymous-proxy-list/
@@ -100,26 +71,15 @@ http://spys.ru/free-proxy-list/ID/
 http://spys.ru/free-proxy-list/VE/
 http://spys.ru/free-proxy-list/FR/
 http://spys.ru/free-proxy-list/NL/
-http://proxy.centerblog.net/
 http://free-proxy.blogspot.com.tr/
-
-http://www.proxydb.ru/News.aspx|HTTP|0`
-
-
-
 
 js http://www.idcloak.com/proxylist/free-proxy-ip-list.html
 
-
 http://freenetcracker.blogspot.com.tr/2015/02/top-proxy-list.html
-
 
 https://www.indoblog.me/2017/02/inilah-dia-daftar-proxy-gratis-dan.html
 http://tools.rosinstrument.com/proxy/?rule1
 https://sockslist.net/
-
-
-
 
 http://www.ip181.com/
 

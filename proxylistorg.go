@@ -21,6 +21,15 @@ func proxyListOrg() []string {
 	return ips
 }
 
+func proxyListOrgLinks() []string {
+	var links []string
+	for page := 1; page < 5; page++ {
+		links = append(links, fmt.Sprintf("https://proxy-list.org/english/index.php?p=%d", page))
+	}
+	links = append(links, `https://proxy-list.org/english/search.php?search=anonymous-and-elite&country=any&type=anonymous-and-elite&port=any&ssl=any`)
+	return links
+}
+
 func proxyListOrgIPS(body []byte) []string {
 	var ips []string
 	r := bytes.NewReader(body)
@@ -40,13 +49,4 @@ func proxyListOrgIPS(body []byte) []string {
 		}
 	})
 	return ips
-}
-
-func proxyListOrgLinks() []string {
-	var links []string
-	for page := 1; page < 5; page++ {
-		links = append(links, fmt.Sprintf("https://proxy-list.org/english/index.php?p=%d", page))
-	}
-	links = append(links, `https://proxy-list.org/english/search.php?search=anonymous-and-elite&country=any&type=anonymous-and-elite&port=any&ssl=any`)
-	return links
 }
