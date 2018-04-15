@@ -44,7 +44,7 @@ func proxyListOrgIPS(body []byte) []string {
 		ip = strings.Replace(ip, "Proxy('", "", -1)
 		ip = strings.Replace(ip, "')", "", -1)
 		ip = decodeBase64(ip)
-		if ip != "" && (scheme == HTTP || scheme == HTTPS || scheme == SOCKS5) {
+		if ip != "" && (scheme == HTTP || scheme == HTTPS || scheme == SOCKS5 || scheme == SOCKS4) {
 			ips = append(ips, scheme+"://"+ip)
 		}
 	})

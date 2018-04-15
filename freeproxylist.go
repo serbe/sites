@@ -43,7 +43,9 @@ func freeProxyListIPS(body []byte) []string {
 		if td.Length() == 8 {
 			if strings.ToLower(td.Eq(4).Text()) == SOCKS5 {
 				ips = append(ips, "socks5://"+td.Eq(0).Text()+":"+td.Eq(1).Text())
-			} else if strings.ToLower(td.Eq(4).Text()) != "socks4" {
+			} else if strings.ToLower(td.Eq(4).Text()) == SOCKS4 {
+				ips = append(ips, "socks4://"+td.Eq(0).Text()+":"+td.Eq(1).Text())
+			} else {
 				if td.Eq(6).Text() == "yes" {
 					ips = append(ips, "https://"+td.Eq(0).Text()+":"+td.Eq(1).Text())
 				} else {

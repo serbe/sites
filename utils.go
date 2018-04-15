@@ -13,6 +13,7 @@ import (
 const (
 	HTTP   = "http"
 	HTTPS  = "https"
+	SOCKS4 = "socks4"
 	SOCKS5 = "socks5"
 )
 
@@ -47,7 +48,7 @@ func crawl(target string) ([]byte, error) {
 func ipsFromBytes(body []byte, scheme string) []string {
 	var ips []string
 	reIP := `((?:(?:[0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}(?:[0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]):\d{2,5})`
-	reIPWScheme := `([http|https|socks5]://(?:(?:[0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}(?:[0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]):\d{2,5})`
+	reIPWScheme := `([http|https|socks4|socks5]://(?:(?:[0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}(?:[0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]):\d{2,5})`
 	re := regexp.MustCompile(reIP)
 	if scheme == "" {
 		re = regexp.MustCompile(reIPWScheme)
