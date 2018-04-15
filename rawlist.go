@@ -24,6 +24,8 @@ func rawListLinks() []string {
 		"http://www.atomintersoft.com/high_anonymity_elite_proxy_list",
 		"http://www.atomintersoft.com/anonymous_proxy_list",
 		"http://globalproxies.blogspot.com",
+		"https://awmproxy.com/freeproxy.php",
+		"http://www.httptunnel.ge/ProxyListForFree.aspx",
 	}
 	return links
 }

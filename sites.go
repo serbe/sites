@@ -42,6 +42,10 @@ func ParseSites(logDebug, logError bool) []string {
 		ch <- data
 	}()
 	go func() {
+		data := parser{name: "idcloakCom", ips: idcloakCom()}
+		ch <- data
+	}()
+	go func() {
 		data := parser{name: "ipaddressCom", ips: ipaddressCom()}
 		ch <- data
 	}()
@@ -78,7 +82,7 @@ func ParseSites(logDebug, logError bool) []string {
 		ch <- data
 	}()
 
-	for i := 0; i < 16; i++ {
+	for i := 0; i < 17; i++ {
 		data := <-ch
 		debugmsg("get", len(data.ips), "from", data.name)
 		ips = append(ips, data.ips...)
