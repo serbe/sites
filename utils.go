@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"regexp"
+	"time"
 )
 
 // constant schemes
@@ -21,9 +22,9 @@ var (
 )
 
 func crawl(target string) ([]byte, error) {
-	// timeout := time.Duration(15000 * time.Millisecond)
+	timeout := time.Duration(15000 * time.Millisecond)
 	client := &http.Client{
-		// Timeout: timeout,
+		Timeout: timeout,
 	}
 	req, err := http.NewRequest("GET", target, nil)
 	if err != nil {
