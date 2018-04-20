@@ -8,7 +8,7 @@ func rawList() []string {
 			errmsg("rawList crawl", err)
 			continue
 		}
-		ips = append(ips, ipsFromBytes(body, HTTP)...)
+		ips = append(ips, ipsFromBytes(body, "all")...)
 	}
 	return ips
 }
