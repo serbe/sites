@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"regexp"
+	"strings"
 	"time"
 )
 
@@ -101,4 +102,15 @@ func rot13(b rune) rune {
 		return b
 	}
 	return (b-a+13)%(z-a+1) + a
+}
+
+func fixURI(ips []string) []string {
+	for i, res := range ips {
+		split := strings.Split(res, "://")
+		scheme := split[0]
+		if scheme != HTTP && scheme != HTTPS && scheme != SOCKS4 && scheme != SOCKS5 {
+			ips[i] = "http://" + split[1]
+		}
+	}
+	return ips
 }

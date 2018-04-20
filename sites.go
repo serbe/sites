@@ -85,7 +85,7 @@ func ParseSites(logDebug, logError bool) []string {
 	for i := 0; i < 17; i++ {
 		data := <-ch
 		debugmsg("get", len(data.ips), "from", data.name)
-		ips = append(ips, data.ips...)
+		ips = append(ips, fixURI(data.ips)...)
 	}
 	debugmsg("end parse sites, found", len(ips), "proxy")
 	return ips

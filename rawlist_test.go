@@ -12,5 +12,6 @@ func Test_rawList(t *testing.T) {
 		assert.NoError(t, err, "rawList crawl", link)
 		assert.NotEmpty(t, ipsFromBytes(body, HTTP), "rawListIPS empty", link)
 		checkURI(ipsFromBytes(body, HTTP), t)
+		// printIPS(ipsFromBytes(body, HTTP))
 	}
 }

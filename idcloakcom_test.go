@@ -12,5 +12,6 @@ func Test_idcloakCom(t *testing.T) {
 		assert.NoError(t, err, "idcloakCom crawl", link)
 		assert.NotEmpty(t, idcloakComIPS(body), "idcloakComIPS empty", link)
 		checkURI(idcloakComIPS(body), t)
+		// printIPS(idcloakComIPS(body))
 	}
 }

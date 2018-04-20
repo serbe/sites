@@ -12,5 +12,6 @@ func Test_gatherProxyCom(t *testing.T) {
 		assert.NoError(t, err, "gatherProxyCom crawl", link)
 		assert.NotEmpty(t, gatherProxyComIPS(body), "gatherProxyComIPS empty", link)
 		checkURI(gatherProxyComIPS(body), t)
+		// printIPS(gatherProxyComIPS(body))
 	}
 }

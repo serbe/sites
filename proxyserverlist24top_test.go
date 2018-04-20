@@ -22,6 +22,7 @@ func Test_proxyServerList24Top(t *testing.T) {
 			}
 			assert.NotEmpty(t, ipsFromBytes(body, scheme), "ipsFromBytes empty", link)
 			checkURI(ipsFromBytes(body, scheme), t)
+			// printIPS(ipsFromBytes(body, scheme))
 		}
 	}
 }

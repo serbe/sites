@@ -23,7 +23,7 @@ func kuaidaili() []string {
 
 func kuaidailiLinks() []string {
 	var links []string
-	for page := 1; page < 5; page++ {
+	for page := 1; page < 3; page++ {
 		links = append(links, fmt.Sprintf("https://www.kuaidaili.com/free/inha/%d", page))
 	}
 	return links
