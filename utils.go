@@ -60,14 +60,13 @@ func ipsFromBytes(body []byte, scheme string) []string {
 	results := re.FindAllSubmatch(body, -1)
 	for _, res := range results {
 		proxy := string(res[1])
-		if scheme == "all" {
-			ips = append(ips, HTTP+"://"+proxy)
-			ips = append(ips, HTTPS+"://"+proxy)
-			ips = append(ips, SOCKS5+"://"+proxy)
-		} else if scheme != "" {
-			ips = append(ips, scheme+"://"+proxy)
-		} else {
+		switch scheme {
+		case "all":
+			ips = append(ips, HTTP+"://"+proxy, HTTPS+"://"+proxy, SOCKS5+"://"+proxy)
+		case "":
 			ips = append(ips, proxy)
+		default:
+			ips = append(ips, scheme+"://"+proxy)
 		}
 	}
 	return ips
