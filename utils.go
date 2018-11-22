@@ -91,7 +91,10 @@ func errmsg(str string, err error) {
 
 func debugmsg(str ...interface{}) {
 	if useDebug {
-		log.Println(str)
+		for i := range str {
+			log.Print(str[i])
+		}
+		log.Println()
 	}
 }
 
