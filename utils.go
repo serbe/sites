@@ -24,7 +24,7 @@ var (
 )
 
 func crawl(target string) ([]byte, error) {
-	timeout := time.Duration(15000 * time.Millisecond)
+	timeout := time.Duration(15000) * time.Millisecond
 	client := &http.Client{
 		Timeout: timeout,
 	}
@@ -77,12 +77,6 @@ func decodeBase64(src string) string {
 	return string(out)
 }
 
-// func chkErr(str string, err error) {
-// 	if err != nil {
-// 		errmsg(str, err)
-// 	}
-// }
-
 func errmsg(str string, err error) {
 	if useError {
 		log.Println("Error in", str, err)
@@ -91,10 +85,7 @@ func errmsg(str string, err error) {
 
 func debugmsg(str ...interface{}) {
 	if useDebug {
-		for i := range str {
-			log.Print(str[i])
-		}
-		log.Println()
+		log.Printf("%s\n", str)
 	}
 }
 
