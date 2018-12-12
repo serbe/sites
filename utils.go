@@ -85,7 +85,7 @@ func errmsg(str string, err error) {
 
 func debugmsg(str ...interface{}) {
 	if useDebug {
-		log.Printf("%s\n", str)
+		log.Println(str...)
 	}
 }
 
