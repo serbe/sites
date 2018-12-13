@@ -1,5 +1,7 @@
 package sites
 
+import "net/url"
+
 // ParseSites - parse sites to find proxy.
 // logDebug to show debug information
 // logError to show error messages
@@ -87,6 +89,13 @@ func ParseSites(logDebug, logError bool) []string {
 		debugmsg("get", len(data.ips), "from", data.name)
 		ips = append(ips, fixURI(data.ips)...)
 	}
-	debugmsg("end parse sites, found", len(ips), "proxy")
-	return ips
+	var checkedIPS []string
+	for i := range ips {
+		u, err := url.Parse(ips[i])
+		if err == nil {
+			checkedIPS = append(checkedIPS, u.Scheme+"://"+u.Hostname()+":"+u.Port())
+		}
+	}
+	debugmsg("end parse sites, found", len(checkedIPS), "proxy")
+	return checkedIPS
 }
