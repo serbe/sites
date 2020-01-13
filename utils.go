@@ -42,11 +42,11 @@ func crawl(target string) ([]byte, error) {
 	}
 	body, err := ioutil.ReadAll(resp.Body)
 	resp.Body.Close()
-	fname := strings.ReplaceAll(target, "/", "")
-	fname = strings.ReplaceAll(fname, ":", "")
-	fname = strings.ReplaceAll(fname, ".", "")
-	fname = fname + ".html"
-	_ = ioutil.WriteFile(fname, body, 0644)
+	// fname := strings.ReplaceAll(target, "/", "")
+	// fname = strings.ReplaceAll(fname, ":", "")
+	// fname = strings.ReplaceAll(fname, ".", "")
+	// fname = fname + ".html"
+	// _ = ioutil.WriteFile(fname, body, 0644)
 	return body, err
 }
 
