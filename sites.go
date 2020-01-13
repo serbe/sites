@@ -19,10 +19,10 @@ func ParseSites(logDebug, logError bool) []string {
 		data := parser{name: "cnProxyCom", ips: cnProxyCom()}
 		ch <- data
 	}()
-	go func() {
-		data := parser{name: "coolProxyNet", ips: coolProxyNet()}
-		ch <- data
-	}()
+	// go func() {
+	// 	data := parser{name: "coolProxyNet", ips: coolProxyNet()}
+	// 	ch <- data
+	// }()
 	go func() {
 		data := parser{name: "cyberSyndromeNet", ips: cyberSyndromeNet()}
 		ch <- data
@@ -84,7 +84,7 @@ func ParseSites(logDebug, logError bool) []string {
 		ch <- data
 	}()
 
-	for i := 0; i < 17; i++ {
+	for i := 0; i < 16; i++ {
 		data := <-ch
 		debugmsg("get", len(data.ips), "from", data.name)
 		ips = append(ips, fixURI(data.ips)...)

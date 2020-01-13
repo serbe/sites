@@ -42,7 +42,11 @@ func crawl(target string) ([]byte, error) {
 	}
 	body, err := ioutil.ReadAll(resp.Body)
 	resp.Body.Close()
-	// ioutil.WriteFile("tmp.html", body, 0644)
+	fname := strings.ReplaceAll(target, "/", "")
+	fname = strings.ReplaceAll(fname, ":", "")
+	fname = strings.ReplaceAll(fname, ".", "")
+	fname = fname + ".html"
+	_ = ioutil.WriteFile(fname, body, 0644)
 	return body, err
 }
 
@@ -89,18 +93,18 @@ func debugmsg(str ...interface{}) {
 	}
 }
 
-func rot13(b rune) rune {
-	var a, z rune
-	switch {
-	case 'a' <= b && b <= 'z':
-		a, z = 'a', 'z'
-	case 'A' <= b && b <= 'Z':
-		a, z = 'A', 'Z'
-	default:
-		return b
-	}
-	return (b-a+13)%(z-a+1) + a
-}
+// func rot13(b rune) rune {
+// 	var a, z rune
+// 	switch {
+// 	case 'a' <= b && b <= 'z':
+// 		a, z = 'a', 'z'
+// 	case 'A' <= b && b <= 'Z':
+// 		a, z = 'A', 'Z'
+// 	default:
+// 		return b
+// 	}
+// 	return (b-a+13)%(z-a+1) + a
+// }
 
 func fixURI(ips []string) []string {
 	for i, res := range ips {
