@@ -1,11 +1,16 @@
 package sites
 
-import "net/url"
+import (
+	"math/rand"
+	"net/url"
+	"time"
+)
 
 // ParseSites - parse sites to find proxy.
 // logDebug to show debug information
 // logError to show error messages
 func ParseSites(logDebug, logError bool) []string {
+	rand.Seed(time.Now().UnixNano())
 	type parser struct {
 		name string
 		ips  []string
